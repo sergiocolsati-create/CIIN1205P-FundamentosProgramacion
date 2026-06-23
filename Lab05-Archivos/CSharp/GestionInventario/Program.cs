@@ -34,8 +34,7 @@ namespace GestionInventario
         // To String es un metodo especial que C# llama automaticamente cuando necesita impirimir o convertir un texto
         // Lo que hace override es sobreescribir para definirlo como queremos y poder guardarlo en .txt
         public override string ToString() => $"{id},{Nombre},{Categoria},{Stock},{Precio}";
-        
-    }
+            }
 
     internal class Program
     {
@@ -97,8 +96,7 @@ namespace GestionInventario
                 }
         }
             Console.WriteLine("\n Programa Cerrado Datos guardados en Disco");
-        
-    }
+            }
 
         static void MostrarMenu() { // Menu Visual mostrado en consola para ver la funciones disponibles
         
@@ -134,7 +132,6 @@ namespace GestionInventario
             Console.Write("Nombre del producto: ");
             string nombre= Console.ReadLine(); // Lee texto desde el teclado
 
-
             Console.Write("Categoria: ");
             string categoria= Console.ReadLine();
 
@@ -149,7 +146,6 @@ namespace GestionInventario
                 Console.WriteLine("\n El nombre y la categoria son obligatorios");
             }
 
-
             //Crea el producto con los datos asignados
             Producto p = new Producto
             { 
@@ -158,8 +154,7 @@ namespace GestionInventario
                     Categoria=categoria,
                     Stock=stock,
                     Precio=precio
-                     
-                        
+                                          
             };
 
             // Escribir en archivo de texto
@@ -179,10 +174,8 @@ namespace GestionInventario
             Console.WriteLine($"ID:{nuevoId}|{nombre}|{categoria}|Stock:{stock}| S/. {precio:F2}");// F2 muestra solo dos decimales
             Console.WriteLine($"guardado en: {Path.GetFullPath(rutaTxt)} ");
         }
-
-        
-
-       
+             
+             
 
         // OPCION 2 - mostrar inventario
 
@@ -217,7 +210,6 @@ namespace GestionInventario
                         string categ = partes[2];
                         int stock = int.Parse(partes[3]);
                         double precio = double.Parse(partes[4]);
-
 
                         Console.WriteLine($"{id,-5}{nombre,-20}{categ,-15}{stock,7}  S/.{precio,8:F2}");
                         totalProductos++;
