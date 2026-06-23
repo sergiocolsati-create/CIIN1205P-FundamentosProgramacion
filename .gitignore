@@ -1,0 +1,13 @@
+﻿# Archivos generados por el programa
+Lab05-Archivos/Datos/*.txt
+Lab05-Archivos/Datos/*.bin
+
+# Compilacion Visual Studio
+**/bin/
+**/obj/
+*.user
+.vs/
+
+# Python
+__pycache__/
+*.pyc
